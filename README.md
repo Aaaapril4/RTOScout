@@ -1,7 +1,9 @@
+The data cleaning and semantic search parts in this repo are used to support the study of:
+> Huang, J. L., Huang, R., & Jie, Y. (submitted). Return to office reconsidered: HRM systems, public discourse, and the reconfiguration of work. Human Resource Management.
+
 # RTOScout 🚀
 
 Sniffing out return-to-office (RTO) signals from 10-K and 10-Q filings using **RAG** and local **LLMs** (HuggingFace embeddings, ChromaDB, Ollama). ✨
-> Huang, J. L., Huang, R., & Jie, Y. (submitted). Return to office reconsidered: HRM systems, public discourse, and the reconfiguration of work. Human Resource Management.
 
 ## 🛠 Setup
 
@@ -9,11 +11,11 @@ Sniffing out return-to-office (RTO) signals from 10-K and 10-Q filings using **R
    ```bash
    poetry install
    ```
-2. **Pull the Model:** Install [Ollama](https://ollama.ai) and pull your LLM friend:
+2. **Pull the Model:** Install [Ollama](https://ollama.ai) and pull theLLM deployment model:
    ```bash
    ollama pull llama3.2
    ```
-3. **Configure Env:** Create a `.env` in the project root with your technical vibes:
+3. **Configure Env:** Create a `.env` in the project root with your system variables:
    * `OLLAMA_MODEL`, `OLLAMA_BASE_URL`
    * `RTOSCOUT_DATA_ROOT` (optional)
    * `HUGGINGFACE_EMBEDDING_MODEL`, `HF_TOKEN` (optional)
