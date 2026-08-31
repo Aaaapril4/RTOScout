@@ -1,7 +1,9 @@
+The data cleaning and semantic search parts in this repo are used to support the study of:
+> Huang, J. L., Huang, R., & Jie, Y. (submitted). Return to office reconsidered: HRM systems, public discourse, and the reconfiguration of work. Human Resource Management.
+
 # RTOScout 🚀
 
 Sniffing out return-to-office (RTO) signals from 10-K and 10-Q filings using **RAG** and local **LLMs** (HuggingFace embeddings, ChromaDB, Ollama). ✨
-> Huang, J. L., Huang, R., & Jie, Y. (submitted). Return to office reconsidered: HRM systems, public discourse, and the reconfiguration of work. Human Resource Management.
 
 ## 🛠 Setup
 
