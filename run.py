@@ -18,6 +18,7 @@ from rtoscout.config import (
     MAX_WORKERS,
     YEARS,
     FILE_TYPE,
+    SKIP_SCORING,
 )
 from rtoscout.schemas.models import CompanyInput
 
@@ -88,6 +89,7 @@ def main() -> None:
         list(YEARS),
         max_workers=MAX_WORKERS,
         llm_concurrency=LLM_CONCURRENCY,
+        skip_score=SKIP_SCORING,
     )
 
     out_dir = OUT_DIR

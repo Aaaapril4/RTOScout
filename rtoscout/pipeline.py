@@ -194,9 +194,10 @@ def prepare_company_worker(company: CompanyInput, years: List[int]):
 
 def run_pipeline(
     companies: List[CompanyInput],
-    year_list: List[int], 
+    year_list: List[int],
     max_workers: int = 20,
-    llm_concurrency: int = 2
+    llm_concurrency: int = 2,
+    skip_score: bool = False,
 ):
     all_final_results: List[CompanyRTOOutput] = []
     all_chunks: List[dict] = []
@@ -221,6 +222,10 @@ def run_pipeline(
                 except Exception as e:
                     tqdm.write(f"\n[!] {c} failed: {e}")
                 pbar.update(1)
+
+    if skip_score:
+        tqdm.write("[i] SKIP_SCORING enabled — returning retrieved context only.")
+        return all_final_results, all_chunks
 
     if ready_for_scoring:
         scoring_pipeline = RTOPipeline()

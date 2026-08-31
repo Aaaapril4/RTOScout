@@ -23,6 +23,9 @@ YEARS: tuple[int, ...] = (2025, 2026)
 MAX_WORKERS = 20
 LLM_CONCURRENCY = 2
 
+# When True, run retrieval/extraction only and skip the local-LLM scoring phase.
+SKIP_SCORING = False
+
 # Embeddings run locally via sentence-transformers (no API key). No HF_TOKEN required.
 HUGGINGFACE_EMBEDDING_MODEL = os.getenv("HUGGINGFACE_EMBEDDING_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
 HF_TOKEN = os.getenv("HF_TOKEN") or os.getenv("HUGGINGFACE_HUB_TOKEN")  # optional; when unset, Hub warning is suppressed
